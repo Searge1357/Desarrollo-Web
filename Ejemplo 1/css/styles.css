@@ -1,0 +1,73 @@
+html { 
+    font-family: Arial, Helvetica, sans-serif; 
+}
+nav { /* no es necesario poner punto, ya que es una función propia de html*/ 
+    display: flex; 
+    background-color: black;
+    justify-content: flex-end; /*Sacado de la página flexbox qué mandó el profe*/
+}
+nav div { /* El nav div es porque el div es una función dentro del nav*/
+    background-color: green;
+    padding: 10px; /*Espaciado entre elementos*/
+    margin-left: 10px; 
+    margin-right:10px;
+    border-radius: 8px;
+    color:white; 
+}
+nav div:hover { /* Para que el elemento que seleccionamos cambie de alguna forma*/
+    background-color: blue;
+}
+nav a{
+    text-decoration: none; 
+}
+.logo { /* El . es porque es un estilo que creamos */
+    background: transparent; 
+    flex-grow:1;
+}
+.logo:hover{
+    background-color: black;
+}
+.logo img {
+    height: 50px; 
+}
+body {
+    display:flex; 
+    flex-direction:column;
+    min-height: 100vh; /*El tamaño de la ventana*/
+    margin: 0px; 
+}
+.cuerpo{
+    display:flex; 
+    justify-content: space-evenly; 
+    flex-grow: 1;
+}
+.cuerpo div {
+    margin-left: 15px; 
+    margin-right: 15px; 
+}
+.footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+@media (max-width:700px){ /*Para qué la ventana se vea de una forma en pantallas dde determinado tamaño*/
+.cuerpo {
+    flex-direction: column; /*Como lo teníamos antes, si la venta se hacía chiquita, saldrían 3
+                            columnas delgadas, aquí con esto, todo se acomodará en una columna, si
+                            la ventana llega a 700 px*/
+}
+}
+.claro body {
+    background-color: : white;
+}
+.oscuro body {
+    background-color: #222222;
+    color: white; 
+}
+.selector {
+    margin: 10px; 
+    text-align: right;
+    cursor: pointer; /*Para que se ponga la manita del cursor*/
+    text-decoration: underline;
+}
